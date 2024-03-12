@@ -35,3 +35,6 @@ readTimeSpan.remove();
 
 const lastArticle = sectionPosts.querySelector('article:last-of-type');
 lastArticle.remove();
+
+const nonFeaturedArticles = sectionPosts.querySelectorAll('article h3');
+nonFeaturedArticles.forEach(title => title.remove());
