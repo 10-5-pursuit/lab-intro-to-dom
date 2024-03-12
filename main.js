@@ -25,3 +25,6 @@ sectionPosts.append(newArticle.firstChild);
 
 const articles = sectionPosts.querySelectorAll('article');
 sectionPosts.insertBefore(articles[1], articles[0]);
+
+const allPostsLink = document.querySelector('header nav ul li');
+allPostsLink.remove();
