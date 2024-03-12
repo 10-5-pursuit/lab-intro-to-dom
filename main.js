@@ -22,3 +22,6 @@ const sectionPosts = document.querySelector('section.posts');
 const newArticle = document.createElement('div');
 newArticle.innerHTML = newArticleHTML;
 sectionPosts.append(newArticle.firstChild);
+
+const articles = sectionPosts.querySelectorAll('article');
+sectionPosts.insertBefore(articles[1], articles[0]);
