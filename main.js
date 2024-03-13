@@ -28,5 +28,18 @@ secondParagraph.appendChild(aLink);
 aside.appendChild(secondParagraph);
 newArticle.appendChild(aside);
 
-const sectionPost = document.getElementsByClassName('posts');
+const postArticles = document.querySelectorAll('.posts article');
+
+const sectionPost = document.querySelector('.posts');
 sectionPost.appendChild(newArticle);
+
+sectionPost.insertBefore(postArticles[1], postArticles[0]);
+
+document.querySelector('header nav ul li').remove();
+document.querySelector('main section article aside p span').remove();
+document.querySelector('main .posts article:last-child').remove();
+
+const h3Elements = document.querySelectorAll('main .posts article h3');
+for (const elem of h3Elements) {
+    elem.remove();
+}
